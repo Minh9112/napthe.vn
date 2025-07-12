@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhận Kim Cương Miễn Phí</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1f1f1f, #000);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #00ffc8;
+      text-shadow: 0 0 10px #00ffc8;
+    }
+    input, button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px;
+    }
+    input {
+      width: 250px;
+    }
+    button {
+      background-color: #ff007a;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff007a;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #00ff8c;
+    }
+    .loading {
+      font-size: 18px;
+      color: #ccc;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Nhận Kim Cương Free Fire Miễn Phí</h1>
+  <p>Nhập ID Free Fire của bạn để nhận 9999 KC</p>
+  <input type="text" id="uid" placeholder="Nhập ID...">
+  <br>
+  <button onclick="claimKC()">Nhận Ngay</button>
+  <div id="loading" class="loading" style="display:none">Đang xử lý...</div>
+  <div id="result"></div>  <script>
+    function claimKC() {
+      const uid = document.getElementById("uid").value;
+      const loading = document.getElementById("loading");
+      const result = document.getElementById("result");
+
+      if (!uid || uid.length < 5) {
+        alert("Vui lòng nhập ID hợp lệ!");
+        return;
+      }
+
+      loading.style.display = "block";
+      result.innerText = "";
+
+      setTimeout(() => {
+        loading.style.display = "none";
+        result.innerText = `🎉 Thành công! Đã gửi 9999 kim cương vào ID ${uid}!`;
+      }, 3000);
+    }
+  </script></body>
+</html>
